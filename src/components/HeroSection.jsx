@@ -44,7 +44,7 @@ const HeroSection = () => {
         {Array.from({ length: 5 }).map((_, index) => (
           <img
             key={index}
-            src={`./src/images/image${index + 1}.jpg`}
+            src={`A21-flavor-Voayge/src/images/image${index + 1}.jpg`}
             alt={`Image ${index + 1}`}
             className={`w-full h-full rounded-2xl object-cover transition-opacity pr-2 pl-2 ${index === currentImage ? 'opacity-100' : 'opacity-0'}`}
             style={{ display: index === currentImage ? 'block' : 'none' }}
