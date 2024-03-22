@@ -8,5 +8,6 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: resolve(__dirname, 'docs'), // Change the output directory to 'docs'
+    assetsInclude: ['src/images/**'],
   },
 });
