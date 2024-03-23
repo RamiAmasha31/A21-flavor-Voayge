@@ -25,3 +25,6 @@
     font-weight: bold;
     color: #00df9a; /* Custom brand color */
   }
+  .font-serif {
+    font-family: 'Roboto', sans-serif;
+  }

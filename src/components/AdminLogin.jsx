@@ -56,9 +56,37 @@ const AdminLogin = () => {
     // If user is logged in, render AdminDashboard and pass the username as a prop
     return <AdminDashboard username={username} />;
   }
+  const content = [
+    {
+      title: "Admin Login Page",
+      description: "For editing the menu and display the current reservations, please enter you username and password."
+    }
+  ];
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen">
+      <div className='text-center text-white md:w-1/2 p-8'>
+        {content.map((item, index) => (
+          <div key={index} className="mb-12">
+            <h2 className="text-4xl font-bold mb-4 overflow-hidden text-[#eba000] ">
+              {item.title.split('').map((char, index) => (
+                <span
+                  key={`${char}-${index}`}
+                  className="animate-text-reveal inline-block"
+                  style={{ animationDelay: `${0.01 * index}s` }}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </span>
+              ))}
+            </h2>
+            <p className="text-xl leading-relaxed ">{item.description}</p>
+          </div>
+        ))}
+      </div>
+
+
+
+      
       <form onSubmit={handleLogin} className="flex flex-col gap-4">
         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none" required />
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none" required />

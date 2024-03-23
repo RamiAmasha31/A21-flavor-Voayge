@@ -93,7 +93,7 @@ const ReservationsForm = () => {
   };
 
   return (
-    <div className="container w-full bg-black h-screen text-white flex flex-col justify-center items-center">
+<div className="container	 bg-black h-screen text-white flex flex-col justify-center items-center min-w-full" >
       <h2 className="mb-4 text-2xl font-bold text-[#eba000]">Reservations</h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <ReservationFormFields formData={formData} handleInputChange={handleInputChange} />

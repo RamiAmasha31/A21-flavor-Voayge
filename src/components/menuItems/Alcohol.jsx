@@ -77,7 +77,7 @@ const Alcohol = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-28 text-center">
+    <div className="container mx-auto px-4 py-28 text-center ">
       <h2 className="text-center text-2xl font-semibold mb-4 text-[#eba000]">Alcohol</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {alcohols.map(dish => (
@@ -90,15 +90,6 @@ const Alcohol = () => {
         ))}
       </div>
 
-      {/* Form for adding new alcohol item */}
-      <form onSubmit={handleAddAlcohol} className="mt-8">
-        <h3 className="text-xl font-semibold mb-4 text-[#eba000]">Add New Alcohol Item</h3>
-        <input type="text" name="title" placeholder="Title" value={newAlcohol.title} onChange={handleInputChange} className="px-3 py-2 mb-2 border rounded-md focus:outline-none" required />
-        <input type="text" name="description" placeholder="Description" value={newAlcohol.description} onChange={handleInputChange} className="px-3 py-2 mb-2 border rounded-md focus:outline-none" required />
-        <input type="number" name="price" placeholder="Price" value={newAlcohol.price} onChange={handleInputChange} className="px-3 py-2 mb-2 border rounded-md focus:outline-none" required />
-        <input type="text" name="imgSrc" placeholder="Image URL" value={newAlcohol.imgSrc} onChange={handleInputChange} className="px-3 py-2 mb-2 border rounded-md focus:outline-none" required />
-        <button type="submit" className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none focus:bg-blue-600">Add Alcohol</button>
-      </form>
     </div>
   );
 };

@@ -74,7 +74,7 @@ const NavbarWithMegaMenu = ({ onNavItemClick }) => {
   ];
   
   return (
-    <div className='bg-black flex justify-between items-center h-24 mx-auto px-4 text-white relative'>
+    <div className='bg-black flex justify-between items-center h-24 mx-auto px-4 text-white relative' >
       <h1 className='w-full text-3xl font-bold text-[#eba000]'>Flavor Voyage.</h1>
       <ul className='hidden md:flex w-auto'>
         {navItems.map(item => (

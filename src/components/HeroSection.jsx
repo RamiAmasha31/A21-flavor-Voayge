@@ -71,7 +71,7 @@ const HeroSection = () => {
                 </span>
               ))}
             </h2>
-            <p className="text-lg leading-relaxed">{item.description}</p>
+            <p className="text-xl leading-relaxed ">{item.description}</p>
           </div>
         ))}
       </div>

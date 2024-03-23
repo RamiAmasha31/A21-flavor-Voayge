@@ -99,7 +99,7 @@ const PrivateEventsForm = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="container w-full bg-black h-screen text-white flex flex-col justify-center items-center"
+      className="container min-w-full bg-black h-screen text-white flex flex-col justify-center items-center"
     >
       <h2 className="mb-4 text-2xl font-bold text-[#eba000]">Private Events Reservations</h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
