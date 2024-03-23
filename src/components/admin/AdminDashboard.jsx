@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-import CustomAlertModal from './CustomAlertModal'; // Import the custom alert modal
-import ReservationFormFields from './ReservationFormFields';
+import CustomAlertModal from '../CustomAlertModal'; // Import the custom alert modal
+import ReservationFormFields from '../reservations/ReservationFormFields';
 
 const AdminDashboard = ({ username }) => {
   const [menuItem, setMenuItem] = useState('');

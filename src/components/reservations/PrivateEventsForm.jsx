@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import ReservationFormFields from './ReservationFormFields';
-import CustomAlertModal from './CustomAlertModal'; // Import your customized alert component
+import CustomAlertModal from '../CustomAlertModal'; // Import your customized alert component
+import { motion } from 'framer-motion'; // Import framer-motion for animations
 
-const ReservationsForm = () => {
+const PrivateEventsForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phoneNumber: '',
-    numberOfPeople: ''
+    eventType: '',
+    numberOfPeople: '',
   });
-
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -41,13 +41,13 @@ const ReservationsForm = () => {
 
       const db = firebase.firestore();
 
-      // Access Firestore collection for reservations
-      const reservationsCollection = db.collection('reservations');
+      // Access Firestore collection for private events reservations
+      const privateEventsCollection = db.collection('privateEventsReservations');
 
       // Check if the total number of people with reservations within the time window exceeds the restaurant's capacity
       const currentTime = new Date();
       const twoHoursAgo = new Date(currentTime.getTime() - 2 * 60 * 60 * 1000); // 2 hours ago
-      const checkSnapshot = await reservationsCollection.where('timestamp', '>=', twoHoursAgo).get();
+      const checkSnapshot = await privateEventsCollection.where('timestamp', '>=', twoHoursAgo).get();
       let totalPeople = 0;
       checkSnapshot.forEach(doc => {
         totalPeople += parseInt(doc.data().numberOfPeople);
@@ -56,30 +56,34 @@ const ReservationsForm = () => {
       if (totalPeople + formData.numberOfPeople > 300) {
         setAlertMessage('Sorry! The restaurant capacity is full for the next 2 hours. Please choose a different time.');
         setShowAlert(true);
-        // Reset the form after successful submission
+
+        // Reset the form after failed submission
         setFormData({
           name: '',
           email: '',
           phoneNumber: '',
-          numberOfPeople: ''
+          eventType: '',
+          numberOfPeople: '',
         });
+
         return;
       }
 
       // Add the form data to the Firestore collection
-      await reservationsCollection.add({
+      await privateEventsCollection.add({
         ...formData,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       });
 
-      setAlertMessage('Your reservation has been confirmed!');
+      setAlertMessage('Your reservation for the private event has been confirmed!');
       setShowAlert(true);
       // Reset the form after successful submission
       setFormData({
         name: '',
         email: '',
         phoneNumber: '',
-        numberOfPeople: ''
+        eventType: '',
+        numberOfPeople: '',
       });
     } catch (error) {
       console.error('Error handling Firestore:', error);
@@ -87,27 +91,33 @@ const ReservationsForm = () => {
       setShowAlert(true);
     }
   };
-
   const handleAlertClose = () => {
     setShowAlert(false);
   };
-
   return (
-<div className="container	 bg-black h-screen text-white flex flex-col justify-center items-center min-w-full" >
-      <h2 className="mb-4 text-2xl font-bold text-[#eba000]">Reservations</h2>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container min-w-full bg-black h-screen text-white flex flex-col justify-center items-center"
+    >
+      <h2 className="mb-4 text-2xl font-bold text-[#eba000]">Private Events Reservations</h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <ReservationFormFields formData={formData} handleInputChange={handleInputChange} />
+        <div className="flex flex-col">
+          <label htmlFor="eventType" className="text-sm font-semibold text-[#eba000]">Event Type:</label>
+          <input type="text" id="eventType" name="eventType" value={formData.eventType} onChange={handleInputChange} className="px-3 py-2 border rounded-md focus:outline-none text-black" required />
+        </div>
         <div className="flex flex-col">
           <label htmlFor="numberOfPeople" className="text-sm font-semibold text-[#eba000]">Number of People:</label>
           <input type="number" min="0" id="numberOfPeople" name="numberOfPeople" value={formData.numberOfPeople} onChange={handleInputChange} className="px-3 py-2 border rounded-md focus:outline-none text-black" required />
         </div>
-        <button type="submit" className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none focus:bg-blue-600">Submit</button>
+        <button type="submit" className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none ">Submit</button>
       </form>
       {showAlert && (
         <CustomAlertModal message={alertMessage} onClose={handleAlertClose} />
       )}
-    </div>
+    </motion.div>
   );
 };
-
-export default ReservationsForm;
+export default PrivateEventsForm;

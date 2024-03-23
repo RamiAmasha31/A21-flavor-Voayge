@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import HeroSection from './HeroSection';
-import AboutUsSection from './AboutUsSection'; // Import the AboutUsSection component
-import LocationSection from './LocationSection';
-import ReservationsForm from './ReservationsForm';
-import PrivateEventsForm from './PrivateEventsForm';
-
-import Dishes from './menuItems/Dishes'; // Import the Dishes component
-import Drinks from './menuItems/Drinks'; // Import the Drinks component
-//import Desserts from './menuItems/Desserts'; // Import the Desserts component
-import Alcohol from './menuItems/Alcohol'; // Import the Alcohol component
-import AdminLogin from './AdminLogin'
+import HeroSection from '../hero/HeroSection';
+import AboutUsSection from '../about/AboutUsSection'; // Import the AboutUsSection component
+import LocationSection from '../location/LocationSection';
+import ReservationsForm from '../reservations/ReservationsForm';
+import PrivateEventsForm from '../reservations/PrivateEventsForm';
+import Dishes from '../menuItems/Dishes'; // Import the Dishes component
+import Drinks from '../menuItems/Drinks'; // Import the Drinks component
+import Alcohol from '../menuItems/Alcohol'; // Import the Alcohol component
+import AdminLogin from '../admin/AdminLogin'
 const NavbarWithMegaMenu = ({ onNavItemClick }) => {
   const [nav, setNav] = useState(false);
   const [showDropdown, setShowDropdown] = useState(null); // State to manage dropdown visibility
