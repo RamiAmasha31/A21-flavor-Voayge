@@ -55,7 +55,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className='bg-black flex flex-col md:flex-row md:py-10 justify-center items-center h-screen w-full'>
+    <div className='bg-black min-h-screen flex flex-col md:flex-row md:py-10 justify-center items-center'>
       {/* Text content */}
       <div className='text-center text-white md:w-1/2 p-8'>
         {content.map((item, index) => (
