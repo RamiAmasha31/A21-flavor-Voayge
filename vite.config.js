@@ -6,7 +6,6 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [react()],
   build: {
-    assetsInclude: ['src/images/**'],
     outDir: resolve(__dirname, 'docs'), // Change the output directory to 'docs'
     
   },
