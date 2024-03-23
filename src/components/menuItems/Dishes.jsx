@@ -37,7 +37,7 @@ const Dishes = () => {
       <h2 className="text-2xl font-semibold mb-4 text-[#eba000]">Dishes</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {dishes.map(dish => (
-          <div key={dish.id} className="bg-black rounded-md shadow-md p-4 text-white transition duration-300 ease-in-out transform hover:scale-105 hover:bg-[#00df988d]">
+          <div key={dish.id} className="bg-black rounded-md shadow-md p-4 text-white transition duration-300 ease-in-out transform hover:scale-105 hover:bg-[#eba100a5]">
             <img src={dish.imgSrc} alt={dish.title} className="w-full h-96 object-cover rounded-md mb-4" />
             <h3 className="text-lg font-semibold mb-2 text-center">{dish.title}</h3>
             <p className="text-gray-300 mb-2">{dish.description}</p>
