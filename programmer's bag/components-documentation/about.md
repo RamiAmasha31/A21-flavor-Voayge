@@ -22,7 +22,7 @@ The `content` array is mapped over to dynamically render each section. For each 
 
 ## Title Animation
 
-The title of each section is animated using CSS classes to achieve a text reveal effect. Each character of the title is wrapped in a `<span>` element, and CSS animations are applied to animate each character sequentially.
+The title of each section is animated using CSS classes to achieve a text reveal effect. Each character of the title is wrapped in a `<span>` element, and CSS animations are applied to animate each character sequentially. This animation technique is adapted from [Builder.io's stagger text animation](https://www.builder.io/blog/stagger-text-animation-tailwind).
 
 ## Non-Breaking Space
 
