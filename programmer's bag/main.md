@@ -1,7 +1,7 @@
 ## Index File
 
 ### Description:
-The `index.js` file serves as the entry point of the React application. It renders the root component (`App`) into the DOM.
+The `main.js` file serves as the entry point of the React application. It renders the root component (`App`) into the DOM.
 
 ### Dependencies:
 - `react`: A JavaScript library for building user interfaces.
