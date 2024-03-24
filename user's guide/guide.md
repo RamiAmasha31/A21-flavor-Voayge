@@ -32,7 +32,7 @@ Here's how our navigation bar looks like on desktop devices:
 
 ### Mobile View
 For mobile users, the navbar is hidden and there is a mega menu button:
-![navbar mega menu Mobile Image](../images/navbar1-mobile.png)
+![navbar mega menu Mobile Image](../images/navbar1-mobile.png) <br>
 after clicking on it, the navbar will be displayed:
 ![navbar Mobile Image](../images/navbar2-mobile.png)
 
@@ -41,6 +41,17 @@ after clicking on it, the navbar will be displayed:
 ## Reservations
 To make a reservation at our restaurant, navigate to the "Reservations" section in the navigation menu. Fill out the reservation form with your name, email, phone number, and the number of people in your party. Then, click the "Submit" button to confirm your reservation.
 
+### Desktop View
+Here's how our reservations page looks like on desktop devices:
+
+![reservations Desktop Image](../images/res-desktop.png)
+
+### Mobile View
+For mobile users:
+
+![reservations Mobile Image](../images/res-mobile.png)<br>
+after successfull reservation you will get : 
+![reservations successfull Mobile Image](../images/res-success.png)
 ## Private Events
 If you're interested in hosting a private event at our restaurant, you can do so by visiting the "Private Events" section. Fill out the private events reservation form with your event details, including your name, email, phone number, event type, and the number of attendees.
 
