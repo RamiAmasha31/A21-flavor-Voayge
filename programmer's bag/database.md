@@ -64,4 +64,6 @@ This document outlines the database structure for the restaurant project built w
 - **Menu Items**: The menu items are fetched from the respective collections (`menu_dishes`, `menu_drinks`, `menu_alcohol`) and displayed on the website's menu page.
 - **Reservations**: Reservation data from the `reservations` collection are fetched and displayed in the admin dashboard, also the informations about the user reservations saved in this table.
 - **Private Event Reservations**: Data from the `privateEventsReservations` collection are fetched and displayed in the admin dashboard, also the informations about the user reservations saved in this table.
-- **Admin Login**: The admin username and passwords are saved i nthis collection, and if they are exist then the admin has the possibility to add menu items and to show the existing reservations.
+- **Admin Login**: The admin username and passwords are saved in `users` collection, and if they are exist then the admin has the possibility to add menu items and to show the existing reservations.
+
+[Database Link](need to add teh link here )
