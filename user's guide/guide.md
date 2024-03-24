@@ -33,7 +33,7 @@ Here's how our navigation bar looks like on desktop devices:
 ### Mobile View
 For mobile users, the navbar is hidden and there is a mega menu button:
 ![navbar mega menu Mobile Image](../images/navbar1-mobile.png) <br>
-after clicking on it, the navbar will be displayed:
+after clicking on it, the navbar will be displayed:<br>
 ![navbar Mobile Image](../images/navbar2-mobile.png)
 
 
@@ -50,7 +50,7 @@ Here's how our reservations page looks like on desktop devices:
 For mobile users:
 
 ![reservations Mobile Image](../images/res-mobile.png)<br>
-after successfull reservation you will get : 
+after successfull reservation you will get : <br>
 ![reservations successfull Mobile Image](../images/res-success.png)
 ## Private Events
 If you're interested in hosting a private event at our restaurant, you can do so by visiting the "Private Events" section. Fill out the private events reservation form with your event details, including your name, email, phone number, event type, and the number of attendees.
