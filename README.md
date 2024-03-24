@@ -30,3 +30,30 @@ To run the Flavor Voyage Restaurant website locally, follow these steps:
 
 ```bash
 git clone https://github.com/your-username/flavor-voyage-restaurant.git
+```
+2. Navigate to the project directory:
+
+```bash
+cd flavor-voyage-restaurant
+```
+3. install dependencies:
+```bash
+npm install
+```
+4. start the development server:
+```bash
+npm start
+```
+5. Open your web browser and navigate to http://localhost:3000 to view the website.
+
+
+## Usage
+Once the website is running, you can navigate through the different sections using the navigation menu. Explore the menu items, make reservations, and learn more about the restaurant by clicking on the corresponding links.
+
+## Contributing
+Contributions to the Flavor Voyage Restaurant website are welcome! If you find any issues or have suggestions for improvements, please submit a pull request or open an issue on the GitHub repository.
+
+## License
+This project is licensed under the MIT License.
+
+
