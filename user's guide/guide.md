@@ -54,10 +54,25 @@ after successfull reservation you will get : <br>
 ![reservations successfull Mobile Image](../images/res-success.png)
 ## Private Events
 If you're interested in hosting a private event at our restaurant, you can do so by visiting the "Private Events" section. Fill out the private events reservation form with your event details, including your name, email, phone number, event type, and the number of attendees.
+### Desktop View
+Here's how our private events reservations page looks like on desktop devices:
+
+![reservations Desktop Image](../images/pevents-desktop.png)
+
+### Mobile View
+For mobile users:
+
+![reservations Mobile Image](../images/pevents-mobile.png)<br>
+after successfull reservation you will get : <br>
+![reservations successfull Mobile Image](../images/pevents-success.png)
 
 ## About Us
-Learn more about our restaurant by visiting the "About Us" section. Here, you will find information about our history, mission, values, and team members.
+Learn more about our restaurant by visiting the "About Us" section. Here, you will find information about our history, mission, values.
+### Desktop View
 
+<video width="640" height="360" controls>
+  <source src="../images/about-desktop.mp4" type="video/mp4">
+</video>
 ## Contact Us
 Have questions or feedback? Visit the "Contact Us" section to get in touch with our team. You can fill out the contact form with your name, email, phone number, and message, and we'll get back to you as soon as possible.
 
