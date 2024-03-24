@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-
+A21-flavor-Voayge.code-workspace
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

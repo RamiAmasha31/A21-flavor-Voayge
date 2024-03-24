@@ -20,13 +20,13 @@ export const AboutUsSection = () => {
 
     // Return the JSX structure for the About Us section
     return (
-        <section className={`about-us-section h-screen flex justify-center items-center bg-black text-white py-24 px-4 `}>
+        <section className={`about-us-section min-h-screen flex justify-center items-center bg-black text-white py-24 px-4 md:py-16 md:px-8 sm:py-32`}>
             <div className="container mx-auto">
                 {/* Map through the content array to render each item */}
                 {content.map((item, index) => (
-                    <div key={index} className="mb-12">
+                    <div key={index} className="mb-8 md:mb-12">
                         {/* Title of the section */}
-                        <h2 className="text-4xl font-bold mb-4 overflow-hidden text-[#eba000] ">
+                        <h2 className="text-4xl font-bold mb-4 md:text-5xl lg:text-6xl overflow-hidden text-[#eba000] ">
                             {/* Animate each character of the title */}
                             {item.title.split('').map((char, index) => (
                                 <span
