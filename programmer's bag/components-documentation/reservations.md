@@ -12,9 +12,9 @@ None
 - **alertMessage**: A string containing the message to be displayed in the alert modal.
 
 ### Methods:
-- `handleInputChange`: Handles changes in form input fields and updates the formData state accordingly.
-- `handleSubmit`: Handles form submission. It validates the form data, checks the restaurant's capacity, and submits the data to Firestore.
-- `handleAlertClose`: Closes the alert modal.
+- **handleInputChange**: Handles changes in form input fields and updates the formData state accordingly.
+- **handleSubmit**: Handles form submission. It validates the form data, checks the restaurant's capacity, and submits the data to Firestore.
+- **handleAlertClose**: Closes the alert modal.
 
 ---
 
@@ -49,9 +49,9 @@ None
 - **alertMessage**: A string containing the message to be displayed in the alert modal.
 
 ### Methods:
-- `handleInputChange`: Handles changes in form input fields and updates the formData state accordingly.
-- `handleSubmit`: Handles form submission. It validates the form data, checks the restaurant's capacity, and submits the data to Firestore.
-- `handleAlertClose`: Closes the alert modal.
+- **handleInputChange**: Handles changes in form input fields and updates the formData state accordingly.
+- **handleSubmit**: Handles form submission. It validates the form data, checks the restaurant's capacity, and submits the data to Firestore.
+- **handleAlertClose**: Closes the alert modal.
 
 ---
 
