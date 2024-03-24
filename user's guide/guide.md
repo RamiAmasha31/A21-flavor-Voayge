@@ -69,7 +69,14 @@ after successfull reservation you will get : <br>
 ## About Us
 Learn more about our restaurant by visiting the "About Us" section. Here, you will find information about our history, mission, values.
 ### Desktop View
-[ video](../images/about-desktop.mp4)
+
+
+https://github.com/RamiAmasha31/A21-flavor-Voayge/assets/147834570/4fe86bb7-9cf1-4e08-b8df-658b4b03df01
+
+
+
+https://github.com/RamiAmasha31/A21-flavor-Voayge/assets/147834570/394bfeb4-4853-4d77-b6c5-20e779f790b8
+
 
 ## Contact Us
 Have questions or feedback? Visit the "Contact Us" section to get in touch with our team. You can fill out the contact form with your name, email, phone number, and message, and we'll get back to you as soon as possible.
