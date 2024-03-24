@@ -53,9 +53,15 @@ This document outlines the database structure for the restaurant project built w
      - `phoneNumber`: Phone number of the person organizing the event.
      - `date`: Date of the event.
      - `timestamp`: Timestamp indicating the date and time of the reservation.
+6. **users**
+   - **Description**: Collection to store the users usernames and passwords for the resturant admins.
+   - **Fields**:
+     - `username`: username of the user.
+     - `password`: password of the user.
 
 ## Usage in Project
 
 - **Menu Items**: The menu items are fetched from the respective collections (`menu_dishes`, `menu_drinks`, `menu_alcohol`) and displayed on the website's menu page.
-- **Reservations**: Reservation data from the `reservations` collection are fetched and displayed in the admin dashboard.
-- **Private Event Reservations**: Data from the `privateEventsReservations` collection are fetched and displayed in the admin dashboard.
+- **Reservations**: Reservation data from the `reservations` collection are fetched and displayed in the admin dashboard, also the informations about the user reservations saved in this table.
+- **Private Event Reservations**: Data from the `privateEventsReservations` collection are fetched and displayed in the admin dashboard, also the informations about the user reservations saved in this table.
+- **Admin Login**: The admin username and passwords are saved i nthis collection, and if they are exist then the admin has the possibility to add menu items and to show the existing reservations.
