@@ -7,10 +7,37 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flavor Voyage</title>
-    <script type="module" crossorigin src="./assets/index-DCqnnb8i.js"></script>
+    <script type="module" crossorigin src="./assets/index-Dgs8sLVB.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BlpZmyeF.css">
   </head>
   <body>
     <div id="root" class="bg-black"></div>
+     <!-- special scripts for integration in App Gallery - must be placed at the bottom of the HTML after your code -->
+     <script>
+      // custom config for the MTW app 
+      const mtwAppConfig = {
+          border: true // app border in the MTW page                    
+      }
+
+      ///////////////////////////////////////////////////////
+      // implement this functions in order to use private API        
+      const sendPrivateApiRequest = async () => {
+          // your code here:
+          // sendRequestToParent({ cat: 'getAssets' })
+      }        
+
+      const acceptPrivateApiResponse = async (data) => {
+          // process received data here:
+          // console.log(data)
+      }
+
+      // use this in order to send on document load
+      document.addEventListener('DOMContentLoaded', () => {
+          // your code here:
+          //sendRequestToParent({ method: 'getAssets' })
+      })
+
+  </script>
+  <script src="https://morethanwallet.com/appstore/index.js"></script>
   </body>
 </html>
