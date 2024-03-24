@@ -68,11 +68,11 @@ after successfull reservation you will get : <br>
 
 ## About Us
 Learn more about our restaurant by visiting the "About Us" section. Here, you will find information about our history, mission, values.
-### Desktop View
-[ video](../images/about-desktop.mp4)
 
-## Contact Us
-Have questions or feedback? Visit the "Contact Us" section to get in touch with our team. You can fill out the contact form with your name, email, phone number, and message, and we'll get back to you as soon as possible.
+
+## Admin Login
+This page is made for the resturant mangers for enabling them to add menu items and display the reservations.
+At first the admin is asked for entering username and password (`username`:rami, `password`:amasha). And then the admin dashboard is being displayed.
 
 ## Conclusion
 We hope this user guide helps you navigate our website effectively. If you have any further questions or need assistance, feel free to reach out to us via the contact form. Enjoy your browsing experience!
