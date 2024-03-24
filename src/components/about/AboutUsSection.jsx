@@ -1,6 +1,8 @@
 import React from 'react';
 
+// Define the AboutUsSection functional component
 export const AboutUsSection = () => {
+    // Define content for the About Us section
     const content = [
         {
             title: "Our Story",
@@ -16,22 +18,28 @@ export const AboutUsSection = () => {
         }
     ];
 
+    // Return the JSX structure for the About Us section
     return (
         <section className={`about-us-section h-screen flex justify-center items-center bg-black text-white py-24 px-4 `}>
             <div className="container mx-auto">
+                {/* Map through the content array to render each item */}
                 {content.map((item, index) => (
                     <div key={index} className="mb-12">
+                        {/* Title of the section */}
                         <h2 className="text-4xl font-bold mb-4 overflow-hidden text-[#eba000] ">
+                            {/* Animate each character of the title */}
                             {item.title.split('').map((char, index) => (
                                 <span
                                     key={`${char}-${index}`}
                                     className="animate-text-reveal inline-block"
                                     style={{ animationDelay: `${0.1 * index}s` }}
                                 >
+                                    {/* Replace space with non-breaking space character */}
                                     {char === " " ? "\u00A0" : char}
                                 </span>
                             ))}
                         </h2>
+                        {/* Description of the section */}
                         <p className="text-lg leading-relaxed">{item.description}</p>
                     </div>
                 ))}
@@ -40,4 +48,5 @@ export const AboutUsSection = () => {
     );
 };
 
+// Export the AboutUsSection component as default
 export default AboutUsSection;
