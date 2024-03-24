@@ -13,7 +13,7 @@ Welcome to our website! This user guide will help you navigate through the diffe
 
 ## Homepage
 Upon visiting our website, you will land on the homepage. Here, you will find an overview of our restaurant, including featured dishes, special offers, and upcoming events.
-![Homepage Image](images/home-page-desktop.png)
+![Homepage Image](../images/home-page-desktop.png)
 
 ## Navigation Menu
 Our website features a navigation menu located at the top of the page. You can use this menu to access different sections of the website, such as the menu, reservations, private events, about us, and contact us.
