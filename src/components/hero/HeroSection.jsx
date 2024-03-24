@@ -49,7 +49,7 @@ const HeroSection = () => {
 
   const content = [
     {
-      title: "Welcome to Flavor Voyage",
+      title: "Welcome to Flavor Voyage ",
       description: "Experience a culinary journey like no other."
     }
   ];
