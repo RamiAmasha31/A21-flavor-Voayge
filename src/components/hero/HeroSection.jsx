@@ -60,18 +60,23 @@ const HeroSection = () => {
       <div className='text-center text-white md:w-1/2 p-8'>
         {content.map((item, index) => (
           <div key={index} className="mb-12">
-            <h2 className="text-4xl font-bold mb-4 overflow-hidden text-[#eba000]  sm:text-2xl">
-              {item.title.split('').map((char, index) => (
-                <span
-                  key={`${char}-${index}`}
-                  className="animate-text-reveal inline-block"
-                  style={{ animationDelay: `${0.01 * index}s` }}
-                >
-                  {char === " " ? "\u00A0" : char}
-                </span>
+            <h2 className="text-4xl font-bold mb-4 overflow-hidden text-[#eba000]  sm:text-2xl md:text-4xl lg:text-5xl">
+              {item.title.split(' ').map((word, index) => (
+                <React.Fragment key={index}>
+                  {index !== 0 && <br />}
+                  {word.split('').map((char, index) => (
+                    <span
+                      key={`${char}-${index}`}
+                      className="animate-text-reveal inline-block"
+                      style={{ animationDelay: `${0.01 * index}s` }}
+                    >
+                      {char === " " ? "\u00A0" : char}
+                    </span>
+                  ))}
+                </React.Fragment>
               ))}
             </h2>
-            <p className="text-xl leading-relaxed ">{item.description}</p>
+            <p className="text-xl sm:text-lg md:text-xl leading-relaxed ">{item.description}</p>
           </div>
         ))}
       </div>
