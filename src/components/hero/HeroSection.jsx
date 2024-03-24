@@ -60,7 +60,7 @@ const HeroSection = () => {
       <div className='text-center text-white md:w-1/2 p-8'>
         {content.map((item, index) => (
           <div key={index} className="mb-12">
-            <h2 className="text-4xl font-bold mb-4 overflow-hidden text-[#eba000] ">
+            <h2 className="text-4xl font-bold mb-4 overflow-hidden text-[#eba000]  sm:text-2xl">
               {item.title.split('').map((char, index) => (
                 <span
                   key={`${char}-${index}`}
