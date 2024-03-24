@@ -25,6 +25,18 @@ For mobile users, the homepage is optimized for a seamless browsing experience:
 
 ## Navigation Menu
 Our website features a navigation menu located at the top of the page. You can use this menu to access different sections of the website, such as the menu, reservations, private events, about us, and contact us.
+### Desktop View
+Here's how our navigation bar looks like on desktop devices:
+
+![navbar Desktop Image](../images/navbar-desktop.png)
+
+### Mobile View
+For mobile users, the navbar is hidden and there is a mega menu button:
+![navbar mega menu Mobile Image](../images/navbar1-mobile.png)
+after clicking on it, the navbar will be displayed:
+![navbar Mobile Image](../images/navbar2-mobile.png)
+
+
 
 ## Reservations
 To make a reservation at our restaurant, navigate to the "Reservations" section in the navigation menu. Fill out the reservation form with your name, email, phone number, and the number of people in your party. Then, click the "Submit" button to confirm your reservation.
