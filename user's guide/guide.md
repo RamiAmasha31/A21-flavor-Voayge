@@ -12,8 +12,16 @@ Welcome to our website! This user guide will help you navigate through the diffe
 6. [Contact Us](#contact-us)
 
 ## Homepage
-Upon visiting our website, you will land on the homepage. Here, you will find an overview of our restaurant, including featured dishes, special offers, and upcoming events.
-![Homepage Image](../images/home-page-desktop.png)
+Upon visiting our website, you will land on the homepage. A title and animated gallery will be displayed and at the top will be shown navigation bar.
+### Desktop View
+Here's how our homepage looks like on desktop devices:
+
+![Homepage Desktop Image](../images/home-page-desktop.png)
+
+### Mobile View
+For mobile users, the homepage is optimized for a seamless browsing experience:
+
+![Homepage Mobile Image](../images/home-page-mobile.png)
 
 ## Navigation Menu
 Our website features a navigation menu located at the top of the page. You can use this menu to access different sections of the website, such as the menu, reservations, private events, about us, and contact us.
