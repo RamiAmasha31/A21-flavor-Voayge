@@ -69,10 +69,7 @@ after successfull reservation you will get : <br>
 ## About Us
 Learn more about our restaurant by visiting the "About Us" section. Here, you will find information about our history, mission, values.
 ### Desktop View
-
-<video width="640" height="360" controls>
-  <source src="../images/about-desktop.mp4" type="video/mp4">
-</video>
+[ video](../images/about-desktop.mp4)
 
 ## Contact Us
 Have questions or feedback? Visit the "Contact Us" section to get in touch with our team. You can fill out the contact form with your name, email, phone number, and message, and we'll get back to you as soon as possible.
