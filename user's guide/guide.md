@@ -69,7 +69,11 @@ after successfull reservation you will get : <br>
 ## About Us
 Learn more about our restaurant by visiting the "About Us" section. Here, you will find information about our history, mission, values.
 ### Desktop View
-https://github.com/RamiAmasha31/A21-flavor-Voayge/assets/147834570/4fe86bb7-9cf1-4e08-b8df-658b4b03df01
+
+
+https://github.com/RamiAmasha31/A21-flavor-Voayge/assets/147834570/1c63705e-8871-4079-a9b9-0e872a45b030
+
+
 ### Mobile View
 https://github.com/RamiAmasha31/A21-flavor-Voayge/assets/147834570/76ad0a8c-b625-4664-85bd-3ad10193480d
 
