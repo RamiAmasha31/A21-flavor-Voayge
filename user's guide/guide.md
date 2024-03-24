@@ -68,6 +68,7 @@ after successfull reservation you will get : <br>
 
 ## About Us
 Learn more about our restaurant by visiting the "About Us" section. Here, you will find information about our history, mission, values.
+### Desktop View
 
 
 ## Admin Login
