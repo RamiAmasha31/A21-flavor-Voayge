@@ -20,7 +20,7 @@ export const AboutUsSection = () => {
 
     // Return the JSX structure for the About Us section
     return (
-        <section className={`about-us-section min-h-screen flex justify-center items-center bg-black text-white py-24 px-4 md:py-16 md:px-8 sm:py-32`}>
+        <section className={`about-us-section min-h-screen flex justify-center items-center bg-black text-white py-32 px-4 md:py-16 md:px-8 sm:py-40`}>
             <div className="container mx-auto">
                 {/* Map through the content array to render each item */}
                 {content.map((item, index) => (
