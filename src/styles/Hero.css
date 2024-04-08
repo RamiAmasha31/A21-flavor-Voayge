@@ -1,0 +1,18 @@
+.light-hero{
+background-color:#f0f0f0 ;
+}
+.light-hero div{
+    color:#333;
+}
+.dark-hero{
+   background-color: black; 
+}
+.dark-hero div{
+    color:white;
+}
+.dark-hero div div h2{
+    color:#ebaf00;
+}
+.light-hero div div h2{
+    color:#333;
+}

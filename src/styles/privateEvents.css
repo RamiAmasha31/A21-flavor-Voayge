@@ -1,0 +1,53 @@
+.dark-pEvents{
+
+color: white;
+background-color: black;
+
+}
+   
+
+.dark-pEvents form button{
+    background-color: #ebaf00;
+    color: white;
+
+}
+.dark-pEvents form button:hover{
+opacity:0.7;
+     
+}
+
+.light-pEvents form button{
+    background-color: #333;
+    color: white;
+
+}
+.light-pEvents form button:hover{
+opacity:0.7;
+     
+}
+
+
+.dark-pEvents form div label{
+    color: #ebaf00; 
+}
+
+
+.light-pEvents form div label{
+    color: #333;
+}
+
+.dark-pEvents h2{
+    color: #ebaf00;    
+}
+.light-pEvents{
+
+    color: #333;
+    background-color: #f0f0f0;
+    
+    }
+    .light-pEvents h2{
+
+        color: #333;
+
+        
+        }

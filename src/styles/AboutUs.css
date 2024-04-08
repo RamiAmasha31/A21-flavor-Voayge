@@ -1,0 +1,20 @@
+
+.light-about{
+    background-color: #f0f0f0;
+color:#333;
+text-align: center;
+}
+/* Dark theme styles */
+.dark-about {
+    background-color: black;
+    color: #f0f0f0;
+    text-align: center;
+
+}
+
+/* Additional styles for dark theme h2 elements */
+.dark-about h2 {
+    color: #eba000;
+    text-align: center;
+
+}

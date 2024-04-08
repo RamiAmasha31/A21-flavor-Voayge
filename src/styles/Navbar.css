@@ -1,0 +1,83 @@
+
+/*styles for the h1*/
+.light-navbar h1{
+    color:#333;
+}
+.dark-navbar h1{
+
+    color:#eba000;
+}
+/* Navbar container styles */
+.light-navbar {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .dark-navbar {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Styles for the navbar items */
+  .light-navbar ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #eba000; /* Text color change on hover */
+  }
+  
+  .dark-navbar ul li:hover {
+    background-color: #eba000;
+    color: black;
+  }
+  
+  /* Styles for the dropdown items */
+  .light-navbar ul li ul {
+    background-color: #f0f0f0;
+  }
+  
+  .dark-navbar ul li ul {
+    background-color: black;
+    color: white;
+  }
+  
+  .light-navbar ul li ul li:hover {
+    color: #eba000; /* Text color change on hover */
+  }
+  
+  .dark-navbar ul li ul li:hover {
+    color: black;
+  }
+  
+  /* Styles for the mobile menu */
+  .light-menu-icon {
+    background-color: #f0f0f0;
+  }
+  
+  .dark-menu-icon {
+    background-color: #000300;
+  }
+  
+  .light-menu-icon li:hover {
+    background-color: #f0f0f0;
+    color: #333; /* Text color change on hover */
+  }
+  
+  .dark-menu-icon li:hover {
+    background-color: #eba000;
+    color: black;
+  }
+  
+  /* Styles for the dropdown container */
+  .light-menu-dropdown {
+    background-color: #f0f0f0;
+  }
+  
+  .dark-menu-dropdown {
+    background-color: #eba000;
+    color: black;
+  }
+    /* Styles for dropdown items in light and dark themes */
+.light-menu-dropdown div:hover
+{
+    color: #33333361;}
+ 

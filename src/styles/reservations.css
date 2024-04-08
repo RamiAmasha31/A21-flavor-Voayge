@@ -1,0 +1,58 @@
+.light-reservations{
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+
+.dark-reservations{
+    color: white;
+    background-color: black;
+}
+.dark-reservations h2{
+    color: #ebaf00;
+}
+.light-reservations h2{
+    color: #333;
+}
+
+
+.dark-reservations form div label{
+    color: #ebaf00;
+}
+
+.dark-reservations form div input{
+    color: black;
+}
+
+
+
+
+
+.light-reservations form div label{
+    color: #333;
+}
+
+.light-reservations form div input{
+    color: black;
+}
+.light-reservations form button{
+   background-color: #333;
+   color:white;
+}
+
+
+.light-reservations form button:hover{    
+    opacity:0.7;
+         
+    }
+
+    .dark-reservations form button{
+        background-color: #ebaf00;
+        color:white;
+     }
+     
+     
+     .light-reservations form button:hover{    
+         opacity:0.7;
+              
+         }

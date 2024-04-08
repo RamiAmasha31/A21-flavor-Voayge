@@ -1,7 +1,7 @@
 import React from 'react';
+import '../../styles/AboutUs.css';
 
-// Define the AboutUsSection functional component
-export const AboutUsSection = () => {
+export const AboutUsSection = ({ theme }) => {
     // Define content for the About Us section
     const content = [
         {
@@ -18,23 +18,19 @@ export const AboutUsSection = () => {
         }
     ];
 
-    // Return the JSX structure for the About Us section
     return (
-        <section className={`about-us-section min-h-screen flex justify-center items-center bg-black text-white py-32 px-4 md:py-16 md:px-8 sm:py-40`}>
+        <div className={`${theme === 'light' ? 'light-about' : 'dark-about'} min-h-screen flex justify-center items-center py-32 px-4 md:py-16 md:px-8 sm:py-40 `}>
             <div className="container mx-auto">
-                {/* Map through the content array to render each item */}
                 {content.map((item, index) => (
                     <div key={index} className="mb-8 md:mb-12">
-                        {/* Title of the section */}
-                        <h2 className="text-4xl font-bold mb-4 md:text-5xl lg:text-6xl overflow-hidden text-[#eba000] ">
-                            {/* Animate each character of the title */}
+                        {/* Title of the section with animated reveal */}
+                        <h2 className="text-4xl font-bold mb-4 md:text-5xl lg:text-6xl overflow-hidden">
                             {item.title.split('').map((char, index) => (
                                 <span
                                     key={`${char}-${index}`}
                                     className="animate-text-reveal inline-block"
                                     style={{ animationDelay: `${0.1 * index}s` }}
                                 >
-                                    {/* Replace space with non-breaking space character */}
                                     {char === " " ? "\u00A0" : char}
                                 </span>
                             ))}
@@ -44,9 +40,8 @@ export const AboutUsSection = () => {
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
     );
 };
 
-// Export the AboutUsSection component as default
 export default AboutUsSection;

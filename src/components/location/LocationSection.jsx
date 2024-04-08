@@ -1,20 +1,20 @@
 import React from 'react';
 import LocationMap from './LocationMap';
-
-const LocationSection = () => {
+import '../../styles/location.css'
+const LocationSection = ({theme}) => {
   const location = { lat: 48.8566, lng: 2.3522 }; // Example coordinates for San Francisco
  
   return (
-    <section className="bg-black text-white py-24 px-4 flex flex-col items-center justify-center">
+    <section className={`${theme === 'light' ? 'light-location' : 'dark-location'}  py-24 px-4 flex flex-col items-center justify-center`}>
       <div className="container mx-auto text-center flex flex-col items-center">
-        <h2 className="text-5xl font-bold text-[#eba000] mb-4">Location</h2>
+        <h2 className="text-5xl font-bold  mb-4">Location</h2>
         {/* Display map */}
         <div className="mb-12 flex justify-center" style={{ height: '400px', width: '50%' }}>
           <LocationMap  className="rounded-xl " location={location} />
         </div>
         {/* Operating Hours */}
         <div className="mb-12">
-          <h3 className="text-5xl font-bold text-[#eba000] mb-4">Operating Hours</h3>
+          <h3 className="text-5xl font-bold  mb-4">Operating Hours</h3>
           <p className="text-lg">Monday - Friday: 9:00 AM - 10:00 PM</p>
           <p className="text-lg">Saturday - Sunday: 10:00 AM - 11:00 PM</p>
         </div>

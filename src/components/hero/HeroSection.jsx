@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import firebase from 'firebase/compat/app'; // Import firebase core
 import { getFirestore } from 'firebase/firestore';
+import '../../styles/Hero.css'
 
 const firebaseConfig = {
   apiKey: "AIzaSyCCi75-RJeDgMS17C1qE1StBPyUL85QztA",
@@ -20,7 +21,7 @@ if (!firebase.apps.length) {
 
 const firestore = getFirestore(); // Get Firestore instance
 
-const HeroSection = () => {
+const HeroSection = ({theme}) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [imageUrls, setImageUrls] = useState([]);
 
@@ -55,12 +56,12 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className='bg-black min-h-screen flex flex-col md:flex-row md:py-10 justify-center items-center'>
+    <div className={`${theme === 'light' ? 'light-hero' : 'dark-hero'}   min-h-screen flex flex-col md:flex-row md:py-10 justify-center items-center`}>
       {/* Text content */}
-      <div className='text-center text-white md:w-1/2 p-8'>
+      <div className='text-center  md:w-1/2 p-8'>
         {content.map((item, index) => (
           <div key={index} className="mb-12">
-            <h2 className="text-4xl font-bold mb-4 overflow-hidden text-[#eba000]  sm:text-2xl md:text-4xl lg:text-5xl">
+            <h2 className="text-4xl font-bold mb-4 overflow-hidden   sm:text-2xl md:text-4xl lg:text-5xl">
               {item.title.split(' ').map((word, index) => (
                 <React.Fragment key={index}>
                   {index !== 0 && <br />}

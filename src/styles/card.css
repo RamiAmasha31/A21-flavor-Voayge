@@ -1,0 +1,54 @@
+.light-card{
+    background-color:#f0f0f0;
+    color:#333;
+}
+
+.light-card h2{
+color:#333;
+}
+.light-card div div p{
+    color:rgb(0, 0, 0);
+}
+.light-card div div h3{
+    color:#333;
+}
+.light-card div div:hover{
+    background-color: #3333333b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dark-card{
+    background:black;
+    color:#ebaf00;
+}
+
+.dark-card h2{
+color:#ebaf00;
+}
+.dark-card div div p{
+    color:white
+}
+
+.dark-card div div:hover{
+    background-color: #ebb000af;;
+}
+
+
+.dark-card div div h3{
+    color:white;
+}

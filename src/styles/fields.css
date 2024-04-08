@@ -1,0 +1,13 @@
+.dark-fields label{
+color:#ebaf00;
+}
+.dark-fields input{
+    color:black;
+    }
+    
+.light-fields label{
+     color:#333;
+}        
+.light-fields input{
+    color:black;
+}

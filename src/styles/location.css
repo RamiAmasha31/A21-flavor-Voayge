@@ -1,0 +1,22 @@
+.dark-location{
+    background-color: black;
+
+color: white;
+}
+
+.light-location{
+    background-color: #f0f0f0;
+color: #333;
+}
+.dark-location div h2{
+color: #eba000;
+}
+.light-location div h2{
+    color: #333;
+    }
+.light-location div div h3{
+        color: #333;
+}
+.dark-location div div h3{
+    color: #eba000;
+}

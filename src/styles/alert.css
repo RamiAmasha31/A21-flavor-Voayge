@@ -1,0 +1,71 @@
+.dark-alert{
+
+    background-color: black;
+    opacity: 0.8;
+
+}
+.dark-alert div{
+    background-color: white;
+    }
+    .dark-alert div p {
+       color: black;
+        }
+
+.dark-alert div button {
+background-color: #ebaf00;
+color:white;
+
+}
+
+
+.dark-alert div button:hover {
+opacity:0.7;
+    
+    }
+
+.dark-alert div button:focus {
+        opacity:0.7;
+            
+}
+
+
+/*
+
+  hover:bg-[#00df988d]  focus:bg-blue-600
+*/
+
+.light-alert{
+    background-color: white;
+    opacity: 0.8;
+    }
+    .light-alert div{
+        background-color: black;
+        }
+        .light-alert div p {
+           color: white;
+            }
+    
+    .light-alert div button {
+    background-color: #333;
+    color:white;
+    justify-content: center;
+    }
+    
+    
+    .light-alert div button:hover {
+    opacity:0.7;
+        
+        }
+    
+    .light-alert div button:focus {
+            opacity:0.7;
+                
+    }
+    
+
+
+
+
+
+
+

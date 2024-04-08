@@ -3,8 +3,9 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import AdminDashboard from './AdminDashboard'; // Import the AdminDashboard component
+import '../../styles/adminLogin.css'
 
-const AdminLogin = () => {
+const AdminLogin = ({theme}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -54,7 +55,7 @@ const AdminLogin = () => {
 
   if (loggedIn) {
     // If user is logged in, render AdminDashboard and pass the username as a prop
-    return <AdminDashboard username={username} />;
+    return <AdminDashboard username={username} theme={theme}/>;
   }
   const content = [
     {
@@ -64,11 +65,11 @@ const AdminLogin = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
-      <div className='text-center text-white md:w-1/2 p-8'>
+    <div className={`flex flex-col justify-center items-center h-screen ${theme === 'light' ? 'light-admin-login' : 'dark-admin-login'}`}>
+      <div className='text-center  md:w-1/2 p-8'>
         {content.map((item, index) => (
           <div key={index} className="mb-12">
-            <h2 className="text-4xl font-bold mb-4 overflow-hidden text-[#eba000] ">
+            <h2 className="text-4xl font-bold mb-4 overflow-hidden ">
               {item.title.split('').map((char, index) => (
                 <span
                   key={`${char}-${index}`}
@@ -90,7 +91,7 @@ const AdminLogin = () => {
       <form onSubmit={handleLogin} className="flex flex-col gap-4">
         <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none" required />
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none" required />
-        <button type="submit" className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none focus:bg-blue-600">Login</button>
+        <button type="submit" className="px-4 py-2  rounded-md  focus:outline-none ">Login</button>
         {errorMessage && <p className="text-red-500">{errorMessage}</p>}
       </form>
     </div>

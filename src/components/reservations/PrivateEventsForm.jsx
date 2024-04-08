@@ -3,9 +3,8 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import ReservationFormFields from './ReservationFormFields';
 import CustomAlertModal from '../CustomAlertModal'; // Import your customized alert component
-import { motion } from 'framer-motion'; // Import framer-motion for animations
-
-const PrivateEventsForm = () => {
+import '../../styles/privateEvents.css'
+const PrivateEventsForm = ({theme}) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -95,29 +94,24 @@ const PrivateEventsForm = () => {
     setShowAlert(false);
   };
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="container min-w-full bg-black h-screen text-white flex flex-col justify-center items-center"
-    >
-      <h2 className="mb-4 text-2xl font-bold text-[#eba000]">Private Events Reservations</h2>
+    <div className={`${theme === 'light' ? 'light-pEvents' : 'dark-pEvents'}  container min-w-full  h-screen  flex flex-col justify-center items-center`}>
+      <h2 className="mb-4 text-2xl font-bold ">Private Events Reservations</h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <ReservationFormFields formData={formData} handleInputChange={handleInputChange} />
+        <ReservationFormFields formData={formData} handleInputChange={handleInputChange} theme={theme}/>
         <div className="flex flex-col">
-          <label htmlFor="eventType" className="text-sm font-semibold text-[#eba000]">Event Type:</label>
+          <label htmlFor="eventType" className="text-sm font-semibold text-[#d7ae55]">Event Type:</label>
           <input type="text" id="eventType" name="eventType" value={formData.eventType} onChange={handleInputChange} className="px-3 py-2 border rounded-md focus:outline-none text-black" required />
         </div>
         <div className="flex flex-col">
           <label htmlFor="numberOfPeople" className="text-sm font-semibold text-[#eba000]">Number of People:</label>
           <input type="number" min="0" id="numberOfPeople" name="numberOfPeople" value={formData.numberOfPeople} onChange={handleInputChange} className="px-3 py-2 border rounded-md focus:outline-none text-black" required />
         </div>
-        <button type="submit" className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none ">Submit</button>
+        <button type="submit" className="px-4 py-2  rounded-md  focus:outline-none ">Submit</button>
       </form>
       {showAlert && (
-        <CustomAlertModal message={alertMessage} onClose={handleAlertClose} />
+        <CustomAlertModal message={alertMessage} onClose={handleAlertClose} theme={theme}/>
       )}
-    </motion.div>
+    </div>
   );
 };
 export default PrivateEventsForm;

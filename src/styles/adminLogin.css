@@ -1,0 +1,46 @@
+.dark-admin-login{
+    background-color: black;
+}
+.light-admin-login{
+    background-color: #f0f0f0;
+}
+.dark-admin-login div{
+    color:white;
+}
+.light-admin-login div{
+    color: #333; 
+
+}
+.dark-admin-login div div  h2{
+    color:#eba000;
+}
+
+.light-admin-login div div  h2{
+    color: #333;
+}
+/*
+
+bg-[#eba000] text-white hover:bg-[#eba100a5] focus:bg-blue-600
+
+*/
+
+.dark-admin-login form button{
+    background-color: #eba000;
+    color:white;
+}
+
+.dark-admin-login form button:hover{
+    opacity:0.7;}
+.dark-admin-login form button:focus{
+    opacity:0.7;}
+
+.light-admin-login form button{
+    background-color: #333;
+    color:white;
+}
+
+.light-admin-login form button:hover{
+    opacity:0.7;}
+.light-admin-login form button:focus{
+opacity:0.7;
+}

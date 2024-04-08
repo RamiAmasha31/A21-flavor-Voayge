@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import CustomAlertModal from '../CustomAlertModal'; // Import the custom alert modal
-import ReservationFormFields from '../reservations/ReservationFormFields';
+import '../../styles/adminDashboard.css'
 
-const AdminDashboard = ({ username }) => {
+const AdminDashboard = ({ username ,theme}) => {
   const [menuItem, setMenuItem] = useState('');
   const [itemDescription, setItemDescription] = useState('');
   const [itemPrice, setItemPrice] = useState('');
@@ -90,12 +90,12 @@ const AdminDashboard = ({ username }) => {
   };
 
   return (
-    <div className='bg-black w-full h-screen text-[#eba000] flex flex-col justify-center items-center'>
+    <div className={` w-full h-screen  flex flex-col justify-center items-center ${theme === 'light' ? 'light-admin-dash' : 'dark-admin-dash'}`}>
       <p className="text-xl font-bold mb-4">Hello, {username}</p>
       <div className="flex gap-4 mb-4">
-        <button onClick={handleShowAddMenuItem} className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none focus:bg-blue-600">Add Menu Item</button>
-        <button onClick={handleShowReservations} className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none focus:bg-blue-600">Show Reservations</button>
-        <button onClick={handleShowPrivateEventReservations} className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none focus:bg-blue-600">Show Private Event Reservations</button>
+        <button onClick={handleShowAddMenuItem} className="px-4 py-2 rounded-md">Add Menu Item</button>
+        <button onClick={handleShowReservations} className="px-4 py-2  rounded-md">Show Reservations</button>
+        <button onClick={handleShowPrivateEventReservations} className="px-4 py-2  rounded-md">Show Private Event Reservations</button>
       </div>
 
       {showAddMenuItem && (
@@ -107,18 +107,19 @@ const AdminDashboard = ({ username }) => {
               <option value="drinks">Drinks</option>
               <option value="alcohol">Alcohol</option>
             </select>
-            <input type="text" placeholder="Title" value={menuItem} onChange={(e) => setMenuItem(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none text-black" />
-            <input type="text" placeholder="Description" value={itemDescription} onChange={(e) => setItemDescription(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none text-black" />
-            <input type="text" placeholder="Price" value={itemPrice} onChange={(e) => setItemPrice(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none text-black" />
-            <input type="text" placeholder="Image Source" value={imgSrc} onChange={(e) => setImgSrc(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none text-black" />
-            <button type="submit" className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none focus:bg-[#eba1006f]">Add Item</button>
+            <input type="text" placeholder="Title" value={menuItem} onChange={(e) => setMenuItem(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none text-black" required />
+            <input type="text" placeholder="Description" value={itemDescription} onChange={(e) => setItemDescription(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none text-black" required/>
+            <input type="text" placeholder="Price" value={itemPrice} onChange={(e) => setItemPrice(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none text-black" required />
+            <input type="text" placeholder="Image Source" value={imgSrc} onChange={(e) => setImgSrc(e.target.value)} className="px-3 py-2 border rounded-md focus:outline-none text-black" required/>
+            <button type="submit" className={` text-white px-2 py-4 rounded-md hover:opacity-70 focus:opacity-70 ${theme === 'light' ? 'bg-[#333]' : 'bg-[#eba000]'}`}>Add Item</button>
+            
           </form>
         </>
       )}
 
 {showReservations && (
-  <div className="mt-8 px-4"> {/* Added px-4 for horizontal padding */}
-    <h2 className="text-xl font-bold mb-4">Reservations</h2>
+  <div className="mt-8 px-4 "> {/* Added px-4 for horizontal padding */}
+    <h2 className="text-xl font-bold mb-4 text-center ">Reservations</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       {reservations.map((reservation, index) => {
         // Convert timestamp to a Date object
@@ -134,7 +135,7 @@ const AdminDashboard = ({ username }) => {
         const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
         const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
         return (
-          <div key={index} className="border p-4 rounded-md">
+          <div key={index} className="border-4 p-4 rounded-md hover:opacity-90 hover:scale-110 duration-300">
             <div className="max-w-md mx-auto"> {/* Added max width and centering */}
               <p><strong>Name:</strong> {reservation.name}</p>
               <p><strong>Email:</strong> {reservation.email}</p>
@@ -152,7 +153,7 @@ const AdminDashboard = ({ username }) => {
 )}
 {showPrivateEventReservations && (
   <div className="mt-8 px-4"> {/* Added px-4 for horizontal padding */}
-    <h2 className="text-xl font-bold mb-4">Private Event Reservations</h2>
+    <h2 className="text-xl font-bold mb-4 text-center">Private Event Reservations</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       {privateEventReservations.map((reservation, index) => {
         // Convert timestamp to a Date object
@@ -168,7 +169,7 @@ const AdminDashboard = ({ username }) => {
         const formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
         const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
         return (
-          <div key={index} className="border p-4 rounded-md">
+          <div key={index} className="border-4 p-4 rounded-md hover:opacity-90 hover:scale-110 duration-300">
             <div className="max-w-md mx-auto"> {/* Added max width and centering */}
               <p><strong>Name:</strong> {reservation.name}</p>
               <p><strong>Email:</strong> {reservation.email}</p>
@@ -183,11 +184,7 @@ const AdminDashboard = ({ username }) => {
     </div>
   </div>
 )}
-      {alertMessage && <CustomAlertModal message={alertMessage} onClose={() => setAlertMessage('')} />}
-
-      <div>
-        {/* Your buttons for other functionalities here */}
-      </div>
+      {alertMessage && <CustomAlertModal message={alertMessage} onClose={() => setAlertMessage('')} theme={theme}/>}
     </div>
   );
 };

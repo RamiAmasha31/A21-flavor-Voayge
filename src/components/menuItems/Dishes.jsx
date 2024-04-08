@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 
-const Dishes = () => {
+const Dishes = ({theme}) => {
   const [dishes, setDishes] = useState([]);
 
   useEffect(() => {
@@ -33,15 +33,15 @@ const Dishes = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-28 text-center ">
-      <h2 className="text-2xl font-semibold mb-4 text-[#eba000]">Dishes</h2>
+    <div className={` ${theme === 'light' ? 'light-card' : 'dark-card'}  min-h-screen flex flex-col justify-center items-center py-32 px-4 md:py-16 md:px-8 sm:py-40`}>
+      <h2 className="text-2xl font-semibold mb-4 ">Dishes</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {dishes.map(dish => (
-          <div key={dish.id} className="bg-black rounded-md shadow-md p-4 text-white transition duration-300 ease-in-out transform hover:scale-105 hover:bg-[#eba100a5]">
+          <div key={dish.id} className=" rounded-md shadow-md p-4  transition duration-300 ease-in-out transform hover:scale-105 ">
             <img src={dish.imgSrc} alt={dish.title} className="w-full h-96 object-cover rounded-md mb-4" />
             <h3 className="text-lg font-semibold mb-2 text-center">{dish.title}</h3>
-            <p className="text-gray-300 mb-2">{dish.description}</p>
-            <p className="text-gray-400 font-bold text-center">${dish.price}</p>
+            <p className=" mb-2">{dish.description}</p>
+            <p className=" font-bold text-center">${dish.price}</p>
           </div>
         ))}
       </div>

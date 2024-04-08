@@ -3,8 +3,8 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import ReservationFormFields from './ReservationFormFields';
 import CustomAlertModal from '../CustomAlertModal'; // Import your customized alert component
-
-const ReservationsForm = () => {
+import '../../styles/reservations.css'
+const ReservationsForm = ({theme}) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -93,18 +93,18 @@ const ReservationsForm = () => {
   };
 
   return (
-<div className="container	 bg-black h-screen text-white flex flex-col justify-center items-center min-w-full" >
-      <h2 className="mb-4 text-2xl font-bold text-[#eba000]">Reservations</h2>
+    <div className={`${theme === 'light' ? 'light-reservations' : 'dark-reservations'}  container min-w-full  h-screen  flex flex-col justify-center items-center`}>
+      <h2 className="mb-4 text-2xl font-bold ">Reservations</h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <ReservationFormFields formData={formData} handleInputChange={handleInputChange} />
         <div className="flex flex-col">
-          <label htmlFor="numberOfPeople" className="text-sm font-semibold text-[#eba000]">Number of People:</label>
-          <input type="number" min="0" id="numberOfPeople" name="numberOfPeople" value={formData.numberOfPeople} onChange={handleInputChange} className="px-3 py-2 border rounded-md focus:outline-none text-black" required />
+          <label htmlFor="numberOfPeople" className="text-sm font-semibold ">Number of People:</label>
+          <input type="number" min="0" id="numberOfPeople" name="numberOfPeople" value={formData.numberOfPeople} onChange={handleInputChange} className="px-3 py-2 border rounded-md focus:outline-none " required />
         </div>
-        <button type="submit" className="px-4 py-2 bg-[#eba000] text-white rounded-md hover:bg-[#eba100a5] focus:outline-none focus:bg-blue-600">Submit</button>
+        <button type="submit" className="px-4 py-2  rounded-md  focus:outline-none ">Submit</button>
       </form>
       {showAlert && (
-        <CustomAlertModal message={alertMessage} onClose={handleAlertClose} />
+        <CustomAlertModal message={alertMessage} onClose={handleAlertClose} theme={theme}/>
       )}
     </div>
   );
