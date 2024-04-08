@@ -4,7 +4,7 @@ import HeroSection from './components/hero/HeroSection';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState(<HeroSection/>);
-  const [theme, setTheme] = useState('light'); // Default theme is 'light'
+  const [theme, setTheme] = useState('light'); /// setting default theme for test
 
   const handleNavItemClick = (section) => {
     setActiveSection(section);
