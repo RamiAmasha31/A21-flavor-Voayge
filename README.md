@@ -29,7 +29,7 @@ To run the Flavor Voyage Restaurant website locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/flavor-voyage-restaurant.git
+git clone https://github.com/RamiAmasha31/A21-flavor-Voayge.git
 ```
 2. Navigate to the project directory:
 
